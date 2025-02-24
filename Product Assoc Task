@@ -1,0 +1,58 @@
+-- Creating variants product
+<Product isVariant="Y" isVirtual="N" primaryProductCategoryId="MSports" productId="MS-1-S-Blue" productTypeId="FINISHED_GOOD"/>
+<Product isVariant="Y" isVirtual="N" primaryProductCategoryId="MSports" productId="MS-1-M-Blue" productTypeId="FINISHED_GOOD"/>
+<Product isVariant="Y" isVirtual="N" primaryProductCategoryId="MSports" productId="MS-1-S-Red" productTypeId="FINISHED_GOOD"/>
+<Product isVariant="Y" isVirtual="N" primaryProductCategoryId="MSports" productId="MS-1-M-Red" productTypeId="FINISHED_GOOD"/>
+
+-- Associating our virtual product with its variant
+<ProductAssoc fromDate="2025-02-21 00:00:00.0" productAssocTypeId="PRODUCT_VARIANT" productId="MS-1" productIdTo="MS-1-S-Red"/> 
+<ProductAssoc fromDate="2025-02-21 00:00:00.0" productAssocTypeId="PRODUCT_VARIANT" productId="MS-1" productIdTo="MS-1-M-Red"/> 
+<ProductAssoc fromDate="2025-02-21 00:00:00.0" productAssocTypeId="PRODUCT_VARIANT" productId="MS-1" productIdTo="MS-1-M-Blue"/> 
+<ProductAssoc fromDate="2025-02-21 00:00:00.0" productAssocTypeId="PRODUCT_VARIANT" productId="MS-1" productIdTo="MS-1-S-Blue"/> 
+
+-- Creating features of our product
+<ProductFeature  description="small size" productFeatureCategoryId="TEXT" productFeatureId="S" productFeatureTypeId="SIZE"/> 
+<ProductFeature  description="medium size" productFeatureCategoryId="TEXT" productFeatureId="M" productFeatureTypeId="SIZE"/> 
+<ProductFeature  description="red color" productFeatureCategoryId="TEXT" productFeatureId="Red" productFeatureTypeId="COLOR"/> 
+<ProductFeature  description="blue color" productFeatureCategoryId="TEXT" productFeatureId="Blue" productFeatureTypeId="COLOR"/> 
+
+-- Associating feature with a product
+<ProductFeatureAppl fromDate="2025-02-21 00:00:00.0" productFeatureApplTypeId="STANDARD_FEATURE" productFeatureId="S" productId="MS-1-S-Blue"/> 
+<ProductFeatureAppl fromDate="2025-02-21 00:00:00.0" productFeatureApplTypeId="STANDARD_FEATURE" productFeatureId="Blue" productId="MS-1-S-Blue"/> 
+<ProductFeatureAppl fromDate="2025-02-21 00:00:00.0" productFeatureApplTypeId="STANDARD_FEATURE" productFeatureId="S" productId="MS-1-S-Red"/> 
+<ProductFeatureAppl fromDate="2025-02-21 00:00:00.0" productFeatureApplTypeId="STANDARD_FEATURE" productFeatureId="Red" productId="MS-1-S-Red"/> 
+<ProductFeatureAppl fromDate="2025-02-21 00:00:00.0" productFeatureApplTypeId="STANDARD_FEATURE" productFeatureId="M" productId="MS-1-M-Red"/> 
+<ProductFeatureAppl fromDate="2025-02-21 00:00:00.0" productFeatureApplTypeId="STANDARD_FEATURE" productFeatureId="M" productId="MS-1-M-Blue"/> 
+<ProductFeatureAppl fromDate="2025-02-21 00:00:00.0" productFeatureApplTypeId="STANDARD_FEATURE" productFeatureId="Red" productId="MS-1-M-Red"/> 
+<ProductFeatureAppl fromDate="2025-02-21 00:00:00.0" productFeatureApplTypeId="STANDARD_FEATURE" productFeatureId="Blue" productId="MS-1-M-Blue"/> 
+
+-- Created new products
+<Product brandName="My company" isVariant="N" isVirtual="Y" primaryProductCategoryId="MSports" productId="MyBat"             productTypeId="FINISHED_GOOD"/> 
+<Product brandName="My company" isVariant="N" isVirtual="Y" primaryProductCategoryId="MSports" productId="MyBat-SH"             productTypeId="FINISHED_GOOD"/> 
+<Product brandName="My company" isVariant="N" isVirtual="Y" primaryProductCategoryId="MSports" productId="MyBat-MH"             productTypeId="FINISHED_GOOD"/> 
+<Product brandName="My company" isVariant="N" isVirtual="Y" primaryProductCategoryId="MSports" productId="MyBat-LH"             productTypeId="FINISHED_GOOD"/> 
+
+-- Associating our product to a category
+<ProductCategoryMember fromDate="2025-02-22 00:00:00.0"  productCategoryId="MSports" productId="MyBat"/>
+<ProductCategoryMember fromDate="2025-02-22 00:00:00.0"  productCategoryId="MSports" productId="MyBat-SH"/>
+<ProductCategoryMember fromDate="2025-02-22 00:00:00.0"  productCategoryId="MSports" productId="MyBat-MH"/>
+<ProductCategoryMember fromDate="2025-02-22 00:00:00.0"  productCategoryId="MSports" productId="MyBat-LH"/>
+
+-- Creating product features
+<ProductFeature description="Small Handle" productFeatureId="SMALL_HANDLE" productFeatureTypeId="SIZE"/>
+<ProductFeature description="Medium Handle" productFeatureId="MEDIUM_HANDLE" productFeatureTypeId="SIZE"/>
+<ProductFeature description="Large Handle" productFeatureId="LARGE_HANDLE" productFeatureTypeId="SIZE"/>
+
+-- Associating features with products
+ <ProductFeatureAppl fromDate="2025-02-22 00:00:00.0" productFeatureApplTypeId="SELECTABLE_FEATURE" productFeatureId="SMALL_HANDLE" productId="MyBat-SH"/> 
+ <ProductFeatureAppl fromDate="2025-02-22 00:00:00.0" productFeatureApplTypeId="SELECTABLE_FEATURE" productFeatureId="MEDIUM_HANDLE" productId="MyBat-MH"/> 
+ <ProductFeatureAppl fromDate="2025-02-22 00:00:00.0" productFeatureApplTypeId="SELECTABLE_FEATURE" productFeatureId="LARGE_HANDLE" productId="MyBat-LH"/> 
+ 
+ -- Associating products with each other
+<ProductAssoc fromDate="2025-02-22 00:00:00.0" productAssocTypeId="PRODUCT_VARIANT" productId="MyBat" productIdTo="MyBat-SH"/>
+<ProductAssoc fromDate="2025-02-22 00:00:00.0" productAssocTypeId="PRODUCT_VARIANT" productId="MyBat" productIdTo="MyBat-MH"/>
+<ProductAssoc fromDate="2025-02-22 00:00:00.0" productAssocTypeId="PRODUCT_VARIANT" productId="MyBat" productIdTo="MyBat-LH"/>
+<ProductAssoc fromDate="2025-02-22 00:00:00.0" productAssocTypeId="PRODUCT_UPGRADE" productId="MyBat-SH" productIdTo="MyBat-LH"/>
+<ProductAssoc fromDate="2025-02-22 00:00:00.0" productAssocTypeId="PRODUCT_COMPLEMENT" productId="MyBat-SH" productIdTo="MyBat-MH"/>
+<ProductAssoc fromDate="2025-02-22 00:00:00.0" productAssocTypeId="ALSO_BOUGHT" productId="MyBat-SH" productIdTo="MS-1"/>
+
