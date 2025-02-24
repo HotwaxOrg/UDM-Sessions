@@ -1,0 +1,14 @@
+ -- Creating a new catalog
+ <ProdCatalog catalogName="Mens" createdStamp="2025-02-17 12:40:12.136" createdTxStamp="2025-02-17 12:40:12.116" lastUpdatedStamp="2025-02-17 12:40:12.136" lastUpdatedTxStamp="2025-02-17 12:40:12.116" prodCatalogId="MenCatalog"/>
+ 
+ -- Adding our catalog to the store
+ <ProductStoreCatalog createdStamp="2025-02-17 12:42:52.724" createdTxStamp="2025-02-17 12:42:52.719" fromDate="2025-02-17 00:00:00.0" lastUpdatedStamp="2025-02-17 12:42:52.724" lastUpdatedTxStamp="2025-02-17 12:42:52.719" prodCatalogId="MenCatalog" productStoreId="9000"/> 
+ 
+ -- Creating a new category for our product
+ <ProductCategory createdStamp="2025-02-17 14:22:44.779" createdTxStamp="2025-02-17 14:22:44.771" lastUpdatedStamp="2025-02-17 14:22:44.779" lastUpdatedTxStamp="2025-02-17 14:22:44.771" productCategoryId="MSports" productCategoryTypeId="CATALOG_CATEGORY"/> 
+ 
+ -- Associating product catalog with category 
+ <ProdCatalogCategory createdStamp="2025-02-17 15:14:28.441" createdTxStamp="2025-02-17 15:14:28.434" fromDate="2025-02-17 00:00:00.0" lastUpdatedStamp="2025-02-17 15:14:28.441" lastUpdatedTxStamp="2025-02-17 15:14:28.434" prodCatalogCategoryTypeId="PCCT_BROWSE_ROOT" prodCatalogId="MenCatalog" productCategoryId="MSports"/> 
+ 
+ -- Creating a product
+ <Product createdStamp="2025-02-17 15:21:26.161" createdTxStamp="2025-02-17 15:21:26.159" lastUpdatedStamp="2025-02-17 15:21:26.161" lastUpdatedTxStamp="2025-02-17 15:21:26.159" primaryProductCategoryId="MSports" productId="MS-1" productTypeId="FINISHED_GOOD"/>
